@@ -12,11 +12,11 @@ const TableList: React.FC<{}> = () => {
       title: '客户端ID',
       dataIndex: 'client_id',
     },
-    {
-      title: 'id	',
-      dataIndex: 'id',
-      valueType: 'textarea',
-    },
+    // {
+    //   title: 'id	',
+    //   dataIndex: 'id',
+    //   valueType: 'textarea',
+    // },
     {
       title: 'Ip地址',
       dataIndex: 'ip',
