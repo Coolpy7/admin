@@ -9,16 +9,16 @@ const TableList: React.FC<{}> = () => {
   const actionRef = useRef<ActionType>();
   const columns: ProColumns<TableListItem>[] = [
     {
-      title: '连接信息',
+      title: '连接信息(个)',
       children: [
         {
-          title: 'count',
+          title: '数量',
           dataIndex: 'connections_count',
           key: 'connections_count',
           width: 100,
         },
         {
-          title: 'max',
+          title: '历史最大值',
           dataIndex: 'connections_max',
           key: 'connections_max',
           width: 100,
@@ -26,16 +26,16 @@ const TableList: React.FC<{}> = () => {
       ],
     },
     {
-      title: '订阅信息',
+      title: '订阅信息(个)',
       children: [
         {
-          title: 'count',
+          title: '数量',
           dataIndex: 'subscriptions_count',
           key: 'subscriptions_count',
           width: 100,
         },
         {
-          title: 'max',
+          title: '历史最大值',
           dataIndex: 'subscriptions_max',
           key: 'subscriptions_max',
           width: 100,
@@ -43,16 +43,16 @@ const TableList: React.FC<{}> = () => {
       ],
     },
     {
-      title: '字节信息',
+      title: '字节信息(Bytes)',
       children: [
         {
-          title: 'received',
+          title: '接收',
           dataIndex: 'bytes_received',
           key: 'bytes_received',
           width: 100,
         },
         {
-          title: 'sent',
+          title: '发送',
           dataIndex: 'bytes_sent',
           key: 'bytes_sent',
           width: 100,
@@ -60,10 +60,10 @@ const TableList: React.FC<{}> = () => {
       ],
     },
     {
-      title: '消息信息',
+      title: '消息信息(个)',
       children: [
         {
-          title: 'received',
+          title: '接收',
           dataIndex: 'messages_received',
           key: 'messages_received',
           width: 100,
@@ -75,7 +75,7 @@ const TableList: React.FC<{}> = () => {
           width: 100,
         },
         {
-          title: 'sent',
+          title: '发送',
           dataIndex: 'messages_sent',
           key: 'messages_sent',
           width: 100,
