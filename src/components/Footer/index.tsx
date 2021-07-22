@@ -14,7 +14,7 @@ export default () => {
       copyright="2021 COOLPY.NET出品"
       links={[
         {
-          key: 'Ant Design Pro',
+          key: 'CP7 Admin',
           title: 'COOLPY7',
           href: 'http://coolpy.net/',
           blankTarget: true,

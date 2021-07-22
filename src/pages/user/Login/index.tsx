@@ -77,7 +77,7 @@ const Login: React.FC = () => {
               <span className={styles.title}>COOLPY7</span>
             </Link>
           </div>
-          <div className={styles.desc}>开箱即用的中台前端/设计解决方案</div>
+          <div className={styles.desc}>COOLPY7开箱即用的物联网平台!</div>
         </div>
 
         <div className={styles.main}>

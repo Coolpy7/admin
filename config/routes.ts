@@ -16,45 +16,45 @@ export default [
     ],
   },
   {
-    name: 'Monitor',
+    name: '监控台',
     icon: 'MonitorOutlined',
     path: '/brokers',
     component: './Brokers',
   },
   {
-    name: 'Clients',
+    name: '客户端',
     icon: 'DesktopOutlined',
     path: '/clients',
     component: './Clients',
   },
   {
-    name: 'Topics',
+    name: '主题',
     icon: 'ApartmentOutlined',
     path: '/topics',
     component: './Topics',
   },
   {
-    name: 'Subscriptions',
+    name: '订阅',
     icon: 'ProfileOutlined',
     path: '/subscriptions',
     component: './Subscriptions',
   },
 
   {
-    name: 'Rules',
+    name: '规则引擎',
     icon: 'book',
     path: '/rules',
     component: './Rules',
   },
   {
     path: '/tool',
-    name: 'Tools',
+    name: '工具',
     icon: 'ToolOutlined',
     // component: './Websocket',
     routes: [
       {
         path: '/tool/websocket',
-        name: 'Websocket',
+        name: 'WebSocket',
         icon: 'ToolOutlined',
         component: './Websocket',
       },

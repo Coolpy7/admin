@@ -3,7 +3,7 @@ import { request } from 'umi';
 import type { TableListParams } from './data.d';
 
 export async function querySubs(params?: TableListParams) {
-  console.log('params', params);
+  // console.log('params', params);
   params.filter.client_id = params.client_id;
   params.filter.id = params.id;
   params.filter.ip = params.ip;
