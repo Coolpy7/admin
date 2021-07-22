@@ -150,7 +150,7 @@ const TableList: React.FC<{}> = () => {
     <>
       <PageContainer>
         <ProTable<TableListItem>
-          pagination={{ defaultPageSize: 100 }}
+          pagination={{ defaultPageSize: 10 }}
           options={false}
           actionRef={actionRef}
           rowKey="_id"
