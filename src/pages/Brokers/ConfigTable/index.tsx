@@ -8,7 +8,7 @@ const TableList: React.FC<{}> = () => {
   const actionRef = useRef<ActionType>();
   const columns: ProColumns<TableListItem>[] = [
     {
-      title: '配置',
+      title: '配置状态',
       dataIndex: 'configtype',
       valueType: 'textarea',
     },

@@ -53,13 +53,12 @@ const UpdateForm: React.FC<UpdateFormProps> = (props) => (
                   label="ID"
                   rules={[{ required: true, message: '请输入ID！' }]}
                 />
-                <FormItem
+                <ProFormTextArea
                   name="ruledesc"
                   label="规则描述"
+                  width='xl'
                   rules={[{ required: true, message: '请输入规则描述！' }]}
-                >
-                  <Input.TextArea autoSize={true} />
-                </FormItem>
+                />
                 <FormItem style={{ display: 'none' }} name="_id" label={false}>
                   <Input type="hidden" />
                 </FormItem>
