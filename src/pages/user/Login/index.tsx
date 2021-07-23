@@ -24,7 +24,7 @@ const LoginMessage: React.FC<{
 // 获取当前页面网址
 const Url = window.location.href;
 let splitUrl = Url.split(':')[1];
-sessionStorage.setItem('IP',splitUrl.split('//')[1])
+localStorage.setItem('ip',splitUrl.split('//')[1])
 /** 此方法会跳转到 redirect 参数所在的位置 */
 
 const goto = () => {

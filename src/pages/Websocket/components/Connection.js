@@ -4,8 +4,8 @@ import { Card, Button, Form, Input, Row, Col } from 'antd';
 const Connection = ({ connect, disconnect, connectBtn }) => {
   const [form] = Form.useForm();
   let url = 'iotiot.net';
-  if (sessionStorage.getItem('IP')) {
-    url = sessionStorage.getItem('IP');
+  if (localStorage.getItem('ip')) {
+    url = localStorage.getItem('ip');
   }
 
   const record = {

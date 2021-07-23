@@ -16,10 +16,13 @@ import { queryRule } from './service';
 
 const { Option } = Select;
 function handleChange(value) {
-  sessionStorage.setItem('IP', value);
+  localStorage.setItem('ip', value);
   history.go(0);
+  // let url = "http://"+value+":18083";
+  // window.open(url);
+  // localStorage.setItem('ip', value);
 }
-let initUrl = sessionStorage.getItem('IP');
+let initUrl = localStorage.getItem('ip');
 const style = {
   padding: '8px 0',
 };
