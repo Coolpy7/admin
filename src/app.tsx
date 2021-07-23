@@ -108,7 +108,7 @@ export async function getInitialState(): Promise<{
 let url = 'http://192.168.101.180:8081';
 if (sessionStorage.getItem('IP')) {
   url = ' http://' + sessionStorage.getItem('IP') + ':8081';
-  console.log(url);
+  // console.log(url);
 }
 export const request: RequestConfig = {
   // console.log('888888888',response)
