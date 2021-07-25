@@ -107,7 +107,7 @@ export async function getInitialState(): Promise<{
 // 切换IP地址
 let url = 'http://192.168.101.180:8081';
 if (localStorage.getItem('ip')) {
-  url = ' http://' + localStorage.getItem('ip') + ':8081';
+  url = ' http://' + localStorage.getItem('ip');
   // console.log(url);
 }
 export const request: RequestConfig = {

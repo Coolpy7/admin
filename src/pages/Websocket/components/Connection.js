@@ -5,7 +5,7 @@ const Connection = ({ connect, disconnect, connectBtn }) => {
   const [form] = Form.useForm();
   let url = 'iotiot.net';
   if (localStorage.getItem('ip')) {
-    url = localStorage.getItem('ip');
+    url = localStorage.getItem('ip').split(':')[0];
   }
 
   const record = {
