@@ -9,6 +9,12 @@ import type { LoginParamsType } from '@/services/ant-design-pro/login';
 import { fakeAccountLogin } from '@/services/ant-design-pro/login';
 import styles from './index.less';
 
+// 获取当前页面网址
+const Url = window.location.href;
+let splitUrl = Url.split('://')[1];
+localStorage.setItem('ip',splitUrl.split('/')[0])
+/** 此方法会跳转到 redirect 参数所在的位置 */
+
 const LoginMessage: React.FC<{
   content: string;
 }> = ({ content }) => (
@@ -21,11 +27,6 @@ const LoginMessage: React.FC<{
     showIcon
   />
 );
-// 获取当前页面网址
-const Url = window.location.href;
-let splitUrl = Url.split('://')[1];
-localStorage.setItem('ip',splitUrl.split('/')[0])
-/** 此方法会跳转到 redirect 参数所在的位置 */
 
 const goto = () => {
   const { query } = history.location;

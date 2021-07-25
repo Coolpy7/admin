@@ -34,6 +34,13 @@ export async function getInitialState(): Promise<{
     }
     return undefined;
   };
+  let ip = localStorage.getItem('ip');
+  if(ip == undefined || ip === "") {
+    return {
+      fetchUserInfo,
+      settings: defaultSettings,
+    };
+  }
   // 如果是登录页面，不执行
   if (history.location.pathname !== loginPath) {
     const currentUser = await fetchUserInfo();
@@ -108,10 +115,9 @@ export async function getInitialState(): Promise<{
 let url = 'http://192.168.101.180:8081';
 if (localStorage.getItem('ip')) {
   url = ' http://' + localStorage.getItem('ip');
-  // console.log(url);
 }
 export const request: RequestConfig = {
-  // console.log('888888888',response)
+  timeout: 2000,
   errorHandler: (error: any) => {
     const { response } = error;
     if (!response) {
