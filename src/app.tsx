@@ -112,14 +112,11 @@ export async function getInitialState(): Promise<{
 // process.env.NODE_ENV === 'production' ? `http://123.123.com` : `http://192.168.101.180:18083`;
 
 // 切换IP地址
-let url = 'http://192.168.101.180:8081';
+let rawUrl = window.location.href;
+let splitUrl = rawUrl.split('://')[1];
+let url = 'http://' + splitUrl.split('/')[0];
 if (localStorage.getItem('ip')) {
-  url = ' http://' + localStorage.getItem('ip');
-} else {
-  const Url = window.location.href;
-  let splitUrl = Url.split('://')[1];
-  url = splitUrl.split('/')[0];
-  localStorage.setItem('ip', url);
+  url = 'http://' + localStorage.getItem('ip');
 }
 export const request: RequestConfig = {
   timeout: 2000,
@@ -133,7 +130,6 @@ export const request: RequestConfig = {
     }
     throw error;
   },
-
   // requestInterceptors: [requestInterceptor] ,
   prefix: url,
   // prefix: `${DOMAIN}`,

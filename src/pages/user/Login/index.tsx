@@ -42,13 +42,11 @@ const Login: React.FC = () => {
 
   const handleSubmit = async (values: LoginParamsType) => {
     setSubmitting(true);
-    // console.log('123');
     try {
       // 登录
       const data = await fakeAccountLogin({ ...values });
       //  return
       if (data.status === 'ok') {
-        //  console.log("123")
         localStorage.setItem('token', data.token);
         message.success('登录成功！');
         goto();
